@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DQMenuViewController_Example' do
+  pod 'DQMenuViewController', :path => '../'
+
+  target 'DQMenuViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
