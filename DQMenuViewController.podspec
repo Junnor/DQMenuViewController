@@ -32,7 +32,8 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
 
 #  s.source_files = 'DQMenuViewController/Classes/**/*'
-  s.source_files = 'Pod/Classes/**/*'
+  s.source       = { :git => "https://github.com/Junnor/DQMenuViewController", :commit => "7fee7f7fb98f265925e3abb3cc08f7caa5b51e44" }
+  s.source_files  = 'Classes/*.{h,m}'
 
   # s.resource_bundles = {
   #   'DQMenuViewController' => ['DQMenuViewController/Assets/*.png']
