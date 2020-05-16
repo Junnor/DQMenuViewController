@@ -31,7 +31,7 @@
 		1000A6A139C187D10492069A /* Pods-DQMenuViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQMenuViewController_Example.debug.xcconfig"; path = "Target Support Files/Pods-DQMenuViewController_Example/Pods-DQMenuViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		31084E0AAEE6DEEE0B2B766C /* Pods_DQMenuViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQMenuViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428C471EF37D1D81EBD83DDA /* Pods-DQMenuViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQMenuViewController_Example.release.xcconfig"; path = "Target Support Files/Pods-DQMenuViewController_Example/Pods-DQMenuViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		54F95855EACAC11B9788C1E1 /* DQMenuViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DQMenuViewController.podspec; path = ../DQMenuViewController.podspec; sourceTree = "<group>"; };
+		54F95855EACAC11B9788C1E1 /* DQMenuViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DQMenuViewController.podspec; path = ../DQMenuViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* DQMenuViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQMenuViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		670C4E20D2882CC698AAE48B /* Pods-DQMenuViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQMenuViewController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DQMenuViewController_Tests/Pods-DQMenuViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7362021A6206B75BDC60DDEC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		8F4408E5956AD8A4FBD91092 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7362021A6206B75BDC60DDEC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8F4408E5956AD8A4FBD91092 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B28A132F26A9293A9A55F160 /* Pods_DQMenuViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQMenuViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F30551ADB44CE05E0127A0 /* Pods-DQMenuViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQMenuViewController_Tests.release.xcconfig"; path = "Target Support Files/Pods-DQMenuViewController_Tests/Pods-DQMenuViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,6 @@
 				670C4E20D2882CC698AAE48B /* Pods-DQMenuViewController_Tests.debug.xcconfig */,
 				D4F30551ADB44CE05E0127A0 /* Pods-DQMenuViewController_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

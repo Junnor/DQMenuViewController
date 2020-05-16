@@ -1,0 +1,16 @@
+PODS:
+  - DQMenuViewController (0.1.0)
+
+DEPENDENCIES:
+  - DQMenuViewController (from `../`)
+
+EXTERNAL SOURCES:
+  DQMenuViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DQMenuViewController: 55237c473b4c16b7ca25c95ddad08fcfccc2cc9b
+
+PODFILE CHECKSUM: 94b2790bf046bb761aa39c233d0d3e8a18e8e8e5
+
+COCOAPODS: 1.8.4

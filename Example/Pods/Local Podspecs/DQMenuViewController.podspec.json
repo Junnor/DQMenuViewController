@@ -1,0 +1,22 @@
+{
+  "name": "DQMenuViewController",
+  "version": "0.1.0",
+  "summary": "A short description of DQMenuViewController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Junnor/DQMenuViewController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Junnor": "dengquanzhu@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Junnor/DQMenuViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DQMenuViewController/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module DQMenuViewController {
+  umbrella header "DQMenuViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
