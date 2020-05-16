@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
-  s.source       = { :git => "https://github.com/Junnor/DQMenuViewController", :commit => "98e9d29b62ae38e57fd4ad553db3f87da858744a" }
+  s.source       = { :git => "https://github.com/Junnor/DQMenuViewController", :commit => "7a3ea2855be5c144b170cdd68c1ae93ec53f1058" }
   s.source_files = 'DQMenuViewController/Classes/**/*'
 
   # s.resource_bundles = {
