@@ -15,6 +15,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		87E8C1EBEA3F4ABBA9ABAF89 /* Pods_DQMenuViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28A132F26A9293A9A55F160 /* Pods_DQMenuViewController_Tests.framework */; };
+		8B4E26EE2470226E000137BC /* TitleAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E26ED2470226E000137BC /* TitleAViewController.swift */; };
+		8B4E26F024702291000137BC /* TitleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E26EF24702291000137BC /* TitleBViewController.swift */; };
+		8B4E26F224702971000137BC /* SubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E26F124702971000137BC /* SubMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		670C4E20D2882CC698AAE48B /* Pods-DQMenuViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQMenuViewController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DQMenuViewController_Tests/Pods-DQMenuViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7362021A6206B75BDC60DDEC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8B4E26ED2470226E000137BC /* TitleAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAViewController.swift; sourceTree = "<group>"; };
+		8B4E26EF24702291000137BC /* TitleBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBViewController.swift; sourceTree = "<group>"; };
+		8B4E26F124702971000137BC /* SubMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuViewController.swift; sourceTree = "<group>"; };
 		8F4408E5956AD8A4FBD91092 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B28A132F26A9293A9A55F160 /* Pods_DQMenuViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQMenuViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F30551ADB44CE05E0127A0 /* Pods-DQMenuViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQMenuViewController_Tests.release.xcconfig"; path = "Target Support Files/Pods-DQMenuViewController_Tests/Pods-DQMenuViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				8B4E26ED2470226E000137BC /* TitleAViewController.swift */,
+				8B4E26EF24702291000137BC /* TitleBViewController.swift */,
+				8B4E26F124702971000137BC /* SubMenuViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -331,8 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4E26F024702291000137BC /* TitleBViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				8B4E26EE2470226E000137BC /* TitleAViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				8B4E26F224702971000137BC /* SubMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

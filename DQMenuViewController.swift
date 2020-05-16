@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol DQMenuViewControllerDelegate: class {
+@objc public protocol DQMenuViewControllerDelegate: class {
     
     /// 页面切换
     ///
@@ -21,21 +21,21 @@ import UIKit
 
 private let defaultSelectedPage = 0
 
-class DQMenuViewController: UIViewController {
+public class DQMenuViewController: UIViewController {
     
     // 单独为会话列表的聊天cell设置
-    var isScrollViewScrollEnable = true {
+    public var isScrollViewScrollEnable = true {
         didSet {
             scrollView.isScrollEnabled = isScrollViewScrollEnable
         }
     }
     
     
-    weak var delegate: DQMenuViewControllerDelegate?
+    public weak var delegate: DQMenuViewControllerDelegate?
     
     // MARK: - Designated init
     
-    init(frame: CGRect,
+    public init(frame: CGRect,
          titles: [String],
          viewItems: [UIViewController],
          managerController: UIViewController) {
@@ -61,7 +61,7 @@ class DQMenuViewController: UIViewController {
     /// - Parameter useSeperateLine: 滑动标题和内容之间是否添加分割线
     /// - Parameter useBadge: 是否使用小红点文字显示数目（红点+文字）
     /// - Parameter isRedPoint: 是否使用小红点标示有新内容（红点）
-    func configureContainerUI(isTitleViewStyle: Bool = false,
+    public func configureContainerUI(isTitleViewStyle: Bool = false,
                               useSeperateLine: Bool = false,
                               useBadge: Bool = false,
                               isRedPoint: Bool = false) {
@@ -87,7 +87,7 @@ class DQMenuViewController: UIViewController {
     }
     
     // 隐藏在某个位置标题UI
-    func updateTitleUIAt(_ index: Int, isHide: Bool) {
+    public func updateTitleUIAt(_ index: Int, isHide: Bool) {
         if titleLabels.count > index {
             titleLabels[index].alpha = isHide ? 0 : 1
             titleMarkImageViews[index].alpha = isHide ? 0 : 1
@@ -100,7 +100,7 @@ class DQMenuViewController: UIViewController {
     // MARK: - Public properties
     
     /// Default offset page for container ... set after configureContainerUI()
-    var defaultOffsetPage = defaultSelectedPage {
+    public var defaultOffsetPage = defaultSelectedPage {
         didSet {
             if defaultOffsetPage >= viewItems.count {
                 fatalError("The defaultOffsetPage property must be less than viewItems.count")
@@ -114,7 +114,7 @@ class DQMenuViewController: UIViewController {
     }
     
     /// 是否使用标题的小猫头, 主要是为了据点
-    var useCatTitleMark = false {
+    public var useCatTitleMark = false {
         didSet {
             for imageView in titleMarkImageViews {
                 imageView.isHidden = !useCatTitleMark
@@ -124,7 +124,7 @@ class DQMenuViewController: UIViewController {
     }
     
     /// Menu view height
-    var menuViewHeight: CGFloat = 44 {
+    public var menuViewHeight: CGFloat = 44 {
         didSet {
             //            print("set menuViewHeight")
             menuHeight?.isActive = false
@@ -134,7 +134,7 @@ class DQMenuViewController: UIViewController {
     }
     
     /// Menu view background color
-    var menuTitleViewBackgroundColor =  UIColor.hexStringColor(hex: "#F6F7F9") {
+    public var menuTitleViewBackgroundColor =  UIColor.hexStringColor(hex: "#F6F7F9") {
         didSet {
             //            print("set menuTitleViewColor")
             menuTitleView?.backgroundColor = menuTitleViewBackgroundColor
@@ -142,14 +142,14 @@ class DQMenuViewController: UIViewController {
     }
     
     /// Unselected button item text color
-    var unselectedItemColor = UIColor.hexStringColor(hex: "666666") {
+    public var unselectedItemColor = UIColor.hexStringColor(hex: "666666") {
         didSet {
             //            print("set unselectedItemColor")
         }
     }
     
     /// Selected button item text color
-    var selectedItemColor = UIColor.black {
+    public var selectedItemColor = UIColor.black {
         didSet {
             //            print("set selectedItemColor")
             
@@ -159,14 +159,14 @@ class DQMenuViewController: UIViewController {
     }
     
     // 测试了不是titleViewStyle的表现形式
-    func configureTitleLabelColor() {
+    public func configureTitleLabelColor() {
         for i in 0..<titleLabels.count {
             titleLabels[i].textColor = (i == defaultOffsetPage) ? selectedItemColor : unselectedItemColor
         }
     }
     
     /// Button item font（统一字体设置）
-    var itemFont = UIFont.systemFont(ofSize: 15) {
+    public var itemFont = UIFont.systemFont(ofSize: 15) {
         didSet {
             //            print("set itemFont")
             for title in titleLabels {
@@ -176,7 +176,7 @@ class DQMenuViewController: UIViewController {
     }
     
     /// titleView style 选中的字体状态
-    var selectedItemFont = UIFont.boldSystemFont(ofSize: 17) {
+    public var selectedItemFont = UIFont.boldSystemFont(ofSize: 17) {
         didSet {
             //            print("set itemFont")
             for title in titleLabels {
@@ -186,7 +186,7 @@ class DQMenuViewController: UIViewController {
     }
     
     /// titleView style 的未选中的字体状态
-    var unselectedItemFont = UIFont.systemFont(ofSize: 15) {
+    public var unselectedItemFont = UIFont.systemFont(ofSize: 15) {
         didSet {
             //            print("set itemFont")
             for title in titleLabels {
@@ -197,7 +197,7 @@ class DQMenuViewController: UIViewController {
     
     
     /// Indicator color
-    var indicatorColor = UIColor.black {
+    public var indicatorColor = UIColor.black {
         didSet {
             //            print("set indicatorColor")
             indicatorView?.backgroundColor = indicatorColor
@@ -205,14 +205,14 @@ class DQMenuViewController: UIViewController {
     }
     
     /// 滚动条是黄色的
-    func useYellowStyle() {
+    public func useYellowStyle() {
         indicatorColor = UIColor.hexStringColor(hex: "#FFE249")
         selectedItemColor = UIColor.hexStringColor(hex: "#202437")
         unselectedItemColor = UIColor.hexStringColor(hex: "#797E8B")
     }
     
     /// Indicator view width, value within (0 , screenWidth/viewItems.count)
-    var indicatorWidth: CGFloat = 13 {
+    public var indicatorWidth: CGFloat = 13 {
         didSet {
             //            print("set indicatorWidth")
             indicatorView?.frame.size.width = indicatorWidth
@@ -220,7 +220,7 @@ class DQMenuViewController: UIViewController {
     }
     
     /// Indicator view height, value within (0 , realTitleBottomMargin]
-    var indicatorHeight: CGFloat = 3 {
+    public var indicatorHeight: CGFloat = 3 {
         didSet {
             //            print("set indicatorHeight")
             indicatorView?.frame.size.height = indicatorHeight
@@ -232,7 +232,7 @@ class DQMenuViewController: UIViewController {
     
     
     /// [index: value], 红点显示
-    var showRedBadgeValues: [Int: Int] = [:] {
+    public var showRedBadgeValues: [Int: Int] = [:] {
         didSet {
             for (index, value) in showRedBadgeValues {
                 if index < redBadgeLabels.count && useBadge { // Not out if bounds
@@ -246,7 +246,7 @@ class DQMenuViewController: UIViewController {
         }
     }
     
-    var shouldHideBadgeIndex: Int = 0 {
+    public var shouldHideBadgeIndex: Int = 0 {
         didSet {
             if shouldHideBadgeIndex < redBadgeLabels.count {
                 redBadgeLabels[shouldHideBadgeIndex].isHidden = true
@@ -551,7 +551,8 @@ class DQMenuViewController: UIViewController {
             //            managerController?.navigationItem.titleView = menuView
             
             // new set
-            managerController?.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: actionMenuView)
+//            managerController?.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: actionMenuView)
+            managerController?.navigationItem.titleView = actionMenuView
             self.indicatorView?.isHidden = true
         }
         
@@ -569,7 +570,7 @@ class DQMenuViewController: UIViewController {
         
     }
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         resetSubviewsLayoutIfNeeded()
@@ -700,7 +701,7 @@ class DQMenuViewController: UIViewController {
     }
     
     // 滚动到某个页面， 从0开始 [0, 1, 2 ....]
-    func scrollToPage(_ page: Int) {
+    public func scrollToPage(_ page: Int) {
         let index = page
         
         let scrollWithAnimation = canScrollWithAnimation(current: index)
@@ -753,7 +754,7 @@ class DQMenuViewController: UIViewController {
 
 extension DQMenuViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x == 0.0 {
             return
         }
@@ -765,7 +766,7 @@ extension DQMenuViewController: UIScrollViewDelegate {
         })
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if itemsViewFrameOriginX.contains(scrollView.contentOffset.x) {
             let index = itemsViewFrameOriginX.firstIndex(of: scrollView.contentOffset.x)!
             lastIndex = index
